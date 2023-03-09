@@ -1,0 +1,29 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@inject UserManager<IdentityUser> UserManager
+@inject SignInManager<IdentityUser> SignInManager
+
+
+<header>
+    <div class="container">
+        <a class="logotype" asp-controller="Home" asp-action="Index">@ViewData["Title"]</a>
+
+        <div id="menu" >
+
+            <nav id="menu-links" class="menu-links">
+                <a class="menu-link" asp-controller="Home" asp-action="Index">Home</a>
+                <a class="menu-link" asp-controller="Products" asp-action="Index">Products</a>
+                <a class="menu-link" asp-controller="About" asp-action="Index">Contacts</a>
+            </nav>
+
+            <nav id="menu-icons" class="menu-icons">
+
+                <a class="menu-link ms-5" asp-controller="Account" asp-action="Index">Login</a>
+                <a class="menu-link" asp-controller="Products" asp-action="Search"><i class="fa-regular fa-search"></i></a>
+                <a class="menu-link" asp-controller="Shopping" asp-action="Index">
+                    <i class="fa-regular fa-bag-shopping"></i>
+                </a>
+            </nav>
+
+        </div>
+    </div>
+</header>
